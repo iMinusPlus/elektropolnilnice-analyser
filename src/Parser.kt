@@ -41,7 +41,7 @@ class Parser (private val scanner: Scanner) {
     private fun region_element(): Boolean {
         if (region_elements())
             return true
-        return false
+        return true
     }
 
     private fun elements_inside_region(): Boolean {
@@ -107,13 +107,13 @@ class Parser (private val scanner: Scanner) {
     private fun charging_station_element(): Boolean {
         if (charging_station_elements())
             return true
-        return false
+        return true
     }
 
     private fun elements_inside_charging_station(): Boolean {
         if (charger() || parking_spot() || station_status())
             return true
-        return false
+        return false // true?
     }
 
     private fun station_status(): Boolean {
@@ -179,7 +179,7 @@ class Parser (private val scanner: Scanner) {
     private fun city_element(): Boolean {
         if (city_elements())
             return true
-        return false
+        return true
     }
 
     private fun box(): Boolean {
@@ -241,7 +241,7 @@ class Parser (private val scanner: Scanner) {
             token = scanner.getToken()
             return true
         }
-        if (token.symbol == Symbol.LPAREN) {
+        /*if (token.symbol == Symbol.LPAREN) { //token=COMMA
             token = scanner.getToken()
             if (unary()){
                 if (token.symbol == Symbol.RPAREN) {
@@ -249,7 +249,7 @@ class Parser (private val scanner: Scanner) {
                     return true
                 }
             }
-        }
+        }*/
         return false
     }
 

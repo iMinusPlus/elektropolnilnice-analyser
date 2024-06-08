@@ -1,1 +1,36 @@
-region Slovenija {}
+region Slovenia {
+    city Ljubljana {
+        charging_station Polnilnica1 {
+            operating
+            charger Charger1 {
+                Type2
+                point ( 46.55177519513231, 15.65159017679855 )
+            }
+            parking_spot Parking1 {
+                box ( point ( 46.55177519513231, 15.65159017679855 ), point ( 46.55277519513231, 15.65259017679855 ) )
+            }
+        }
+        charging_station Polnilnica2 {
+            nonfunctional
+            charger FastCharger {
+                Type1
+                point ( 46.55177519513231, 15.65159017679855 )
+            }
+            parking_spot FreeParking {
+                box ( point ( 46.55177519513231, 15.65159017679855 ), point ( 46.55277519513231, 15.65259017679855 ) )
+            }
+        }
+    }
+    city Maribor {
+            charging_station Polnilnica3 {
+                operating
+                charger Charger1 {
+                    Type2
+                    point ( 46.55177519513231, 15.65159017679855 )
+                }
+                parking_spot Parking1 {
+                    box ( point ( 46.55177519513231, 15.65159017679855 ), point ( 46.55277519513231, 15.65259017679855 ) )
+                }
+            }
+        }
+}
