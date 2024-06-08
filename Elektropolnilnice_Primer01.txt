@@ -1,0 +1,33 @@
+region "Slovenia" {
+    city "Ljubljana" {
+        charging_station "Polnilnica1" {
+            "operating"
+            charger "Charger1" {
+                "Type2"
+                point ( 46.55177519513231 15.65159017679855 )
+            }
+            parking_spot "Parking1" {
+                box ( point ( 46.55177519513231 15.65159017679855 ) point ( 46.55277519513231 15.65259017679855 ) )
+            }
+            charger "Charger2" {
+                "CCS"
+                point ( 46.55277519513231 15.65259017679855 )
+            }
+            parking_spot "Parking2" {
+                box ( point ( 46.55277519513231 15.65259017679855 ) point ( 46.55377519513231 15.65359017679855 ) )
+            }
+        }
+    }
+    city "Maribor" {
+        charging_station "Polnilnica2" {
+            "occupied"
+            charger "Charger4" {
+                "Type2"
+                point ( 46.55677519513231 15.65659017679855 )
+            }
+            parking_spot "Parking4" {
+                box ( point ( 46.55777519513231 15.65759017679855 ) point ( 46.55877519513231 15.65859017679855 ) )
+            }
+        }
+    }
+}
