@@ -24,6 +24,7 @@ fun name(symbol: Symbol) =
         Symbol.LCURLYBRACKET -> "lcurly"
         Symbol.RCURLYBRACKET -> "rcurly"
         Symbol.QUOTATIONMARK -> "mark"
+        Symbol.COMMA -> "comma"
         Symbol.REGION -> "region"
         Symbol.CITY -> "city"
         Symbol.CHARGINGSTATION -> "charging_station"
@@ -55,7 +56,12 @@ fun main(args: Array<String>) {
     //val outputPathFile = args[1]
     //printTokens(Scanner(ForForeachFFFAutomaton, readFile(inputPathFile).byteInputStream()), File(outputPathFile).outputStream())
 
+    println("Leksikalni analizator: ")
     printTokens(Scanner(BNF, readFile("Elektropolnilnice_Primer01.txt").byteInputStream()), System.out)
+
+    val parser = Parser(Scanner(BNF, readFile("Elektropolnilnice_Primer01.txt").byteInputStream()))
+    println("Sintakticni analizator. Uspesnost parserja: "+parser.start())
+
 }
 
 

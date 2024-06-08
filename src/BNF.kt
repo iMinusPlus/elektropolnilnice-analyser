@@ -1,10 +1,10 @@
 package task
 
 object BNF : DFA {
-    override val states = (1 .. 66).toSet()
+    override val states = (1 .. 100).toSet()
     override val alphabet = 0 .. 255
     override val startState = 1
-    override val finalStates = setOf(2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 25, 29, 44, 46, 58, 62, 65, 66)
+    override val finalStates = setOf(2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 25, 29, 44, 46, 58, 62, 65, 100, 101)
 
     private val numberOfStates = states.max() + 1 // plus the ERROR_STATE
     private val numberOfCodes = alphabet.max() + 1 // plus the EOF
@@ -58,6 +58,7 @@ object BNF : DFA {
         setSymbol(15, Symbol.LCURLYBRACKET)
         setSymbol(16, Symbol.RCURLYBRACKET)
         setSymbol(17, Symbol.QUOTATIONMARK)
+        setSymbol(100, Symbol.COMMA)
         setSymbol(18, Symbol.SKIP)
         setSymbol(19, Symbol.EOF)
 
@@ -172,6 +173,7 @@ object BNF : DFA {
         setTransition(1, '{', 15)
         setTransition(1, '}', 16)
         setTransition(1, '"', 17)
+        setTransition(1, ',', 100)
 
         setTransition(1, ' ', 18)
         setTransition(1, '\t', 18)

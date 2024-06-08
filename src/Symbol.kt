@@ -16,13 +16,12 @@ enum class Symbol {
     LCURLYBRACKET,
     RCURLYBRACKET,
     QUOTATIONMARK,
+    COMMA,
     REGION,
     CITY,
     CHARGINGSTATION,
     CHARGER,
     PARKINGSPOT,
     POINT,
-    BOX,
-    LINE,
-    CIRCLE
+    BOX
 }
