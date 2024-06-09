@@ -62,6 +62,9 @@ fun main(args: Array<String>) {
     val parser = Parser(Scanner(BNF, readFile("Elektropolnilnice_Primer01.txt").byteInputStream()))
     println("Sintakticni analizator. Uspesnost parserja: "+parser.start())
 
+    println("GeoJSON format: ")
+    println(parser.getGeoJSON())
+
 }
 
 
